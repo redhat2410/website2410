@@ -1,0 +1,227 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+ html 
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     background-color:gainsboro;
+     overflow:unset;
+     min-width: 50%;
+ }
+
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .ms-welcome > h1 {
+     padding-left: 10px;
+ }
+
+.b1-tools__header {
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue";
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 20px;
+    color:rgb(46, 106, 197);
+}
+
+.b1-tools__header::after {
+    content: attr(data-label);
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+ 
+.b1-tools__score {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:white;
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    box-shadow: 1px 1px 1px 1px gray;
+    align-items: center;
+}
+
+.totallabel {
+    position:absolute;
+    display: flex;
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue";
+    color: rgb(46, 106, 197);
+    font-weight: 600;
+    top: 58%;
+    left: 80%;
+}
+
+.b1-tools__score_label {
+    position: absolute;
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue";
+    font-weight: 600;
+    top: 60%;
+    left: 5%;
+}
+
+.b1-tools__score_label::before{
+    content: attr(data-label);
+}
+
+.btn_analyze {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue";
+    width: 160px;
+    height: 35px;
+    border: none;
+    color: rgb(46, 106, 197);
+    background-color: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px gray;
+    left: 5%;
+    top: 15%;
+    cursor: pointer;
+}
+
+.btn_analyze::after {
+    content: attr(data-label);
+    font-weight: 600;
+    padding-left: 2px;
+    padding-bottom: 4px;
+}
+
+.btn_analyze:hover {
+    background-color: rgb(46, 106, 197);
+    color: white;
+}
+
+.checkbox {
+    width: 35px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__box {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    background-color: #c6c6c6;
+    box-shadow: inset 0 0 5px gray;
+    transition: .3s;
+}
+
+.checkbox__box::before {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px gray;
+    transform: scale(1.1);
+    transition: .3s;
+    
+}
+
+.checkbox__input:checked + .checkbox__box {
+    background: #2266dc;
+}
+
+.checkbox__input:checked + .checkbox__box::before {
+    left: 15px;
+}
+
+.b1-tools__result_child {
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue";
+    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 2px 1px 1px 1px gray;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.b1-tools__result_child:hover {
+    background-color: rgb(231, 227, 227);
+}
+
+.b1-tools__result__label{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.b1-tools__result__label::before{
+    content: attr(data-label);
+    word-wrap:initial;
+    font-weight: 600;
+}
+
+.b1-tools__emoji {
+    display: flex;
+    align-items: center;
+    transform: scale(1.2);
+}
+
+.b1-tools__result_score_label {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    color: rgb(0, 110, 255);
+    font-weight: 600;
+}
+
+/* for child element */
+.b1tools__result_child_element {
+    display: flex;
+    width: 100%;
+}
+.b1tools__result__child_elements {
+    display: inline;
+    align-items: center;
+    width: 100%;
+    margin-left: 5%;
+}
+
+.b1tools_child__elements {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 97%;
+    word-wrap: break-word;
+    background-color: ivory;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius:  2px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+pre{
+    font-family: Bahnschrift, "Bahnschrift Web", "Segoe UI", "Helvetica Neue" !important;
+}
